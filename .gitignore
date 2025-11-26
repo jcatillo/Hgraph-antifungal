@@ -1,8 +1,8 @@
-*.pyc
-*model.iter*
-*LOG*
-results*
-model.*
-splits/
-*.pkl
-ckpt/
+# *.pyc
+# *model.iter*
+# *LOG*
+# results*
+# model.*
+# splits/
+# *.pkl
+# ckpt/
