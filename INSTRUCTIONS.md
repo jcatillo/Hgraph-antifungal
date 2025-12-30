@@ -19,8 +19,8 @@ This document provides step-by-step instructions for running the antifungal work
 12. [Notes](#notes)
 
 ## 0) Prereqs
-- Windows with PowerShell (or Linux/macOS shell); git installed.
-- GPU with CUDA 12.8 for training/inference (optional but recommended). CPU works but slower.
+- Windows with PowerShell (use backtick ` for line continuation) or Linux/macOS shell (use \ for line continuation); git installed.
+- Prefer Linux with CUDA GPU for speed; CPU works but slower. If you lack local compute, use Google Colab or a Linux GPU VM.
 
 ## 1) Create Environment (Python 3.10)
 ```bash
@@ -81,12 +81,13 @@ Adjust --train to your preprocessed tensor directory if different.
 ```bash
 python generate.py --vocab data/antifungal/vocab.txt --model ckpt/antifungal/model.ckpt.3300 --nsamples 1000
 ```
-Output: gen.txt (SMILES).
+Output: gen.txt (SMILES). If you capture output from the terminal manually, save it as `results/hgraph_gen/gen.txt` (or `gen.txt` in the repo root) before running downstream steps.
 
 ## 7) Deduplicate & Canonicalize Generated Set
 ```bash
 python custom_scripts/dataset_cleaning/canonicalize_smiles.py --input gen.txt --output gen_unique.txt
 ```
+Always canonicalize and deduplicate `gen.txt` before screening to avoid redundant comparisons and ensure consistency.
 
 ## 8) Computational Screening
 
@@ -118,6 +119,7 @@ Outputs under results/dti_screening/: screening_multi_target_results.csv, screen
 - Paths are relative to repo root; run commands from hgraph2graph/.
 - Ensure CUDA toolkit matches your GPU driver if using GPU builds.
 - If DeepPurpose downloads models, they will cache under its default directory; adjust if needed.
+- Windows PowerShell vs. Linux/macOS: flags are the same, but line continuations differ (use backtick `` ` `` in PowerShell, backslash `\` in bash). If you lack local GPU/CPU resources, prefer Linux with CUDA or run on Google Colab.
 
 ## Outputs Reference
 - Generation: `gen.txt` (root) from `generate.py`.
