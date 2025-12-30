@@ -356,7 +356,7 @@ class HierMPNDecoder(nn.Module):
         src_root_vecs, src_tree_vecs, src_graph_vecs = src_mol_vecs
         batch_size = len(src_root_vecs)
 
-        tree_batch = IncTree(batch_size, node_fdim=2, edge_fdim=3)
+        tree_batch = IncTree(batch_size, node_fdim=2, edge_fdim=3, max_sub_nodes=50)
         graph_batch = IncGraph(
             self.avocab,
             batch_size,

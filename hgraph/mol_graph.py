@@ -16,7 +16,7 @@ class MolGraph(object):
         Chem.rdchem.BondType.TRIPLE,
         Chem.rdchem.BondType.AROMATIC,
     ]
-    MAX_POS = 20
+    MAX_POS = 100
 
     def __init__(self, smiles):
         self.smiles = smiles
