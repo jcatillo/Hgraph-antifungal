@@ -1,5 +1,7 @@
 # Hierarchical Generation of Molecular Graphs using Structural Motifs
 
+For workflow guidance (antifungal pipeline, screening, visualization), see [INSTRUCTIONS.md](INSTRUCTIONS.md).
+
 Our paper is at https://arxiv.org/pdf/2002.03230.pdf
 
 ## Installation
