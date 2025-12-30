@@ -136,6 +136,7 @@ Outputs under results/dti_screening/: screening_multi_target_results.csv, screen
     - `screening_multi_target_results.csv`
     - `screening_detailed_results.csv`
     - `screening_top10_broad_spectrum.txt`
+- Visualizations: see [visualizations/README.md](visualizations/README.md) for plotting commands (novelty histograms, Ro5 bubble plot, molecule images, DeepPurpose plots).
 
 ## CLI Parsers (Per Script)
 Each script defines its own argparse interface. Required flags must be provided or the script exits.

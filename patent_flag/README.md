@@ -16,6 +16,9 @@ Python toolkit for screening compounds against PubChem patents using scaffold ex
 ## Quick Start
 
 ```bash
+# Navigate to patent_flag directory first
+cd patent_flag
+
 # 1. Extract scaffolds
 python scaffold.py -i exact/molecules.txt -o scaffold/molecules.txt
 
