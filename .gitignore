@@ -6,3 +6,4 @@
 # splits/
 # *.pkl
 # ckpt/
+.vscode/
