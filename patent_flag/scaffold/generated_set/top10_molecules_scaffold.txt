@@ -1,0 +1,10 @@
+O=C1CC2C3CCCCC3CCC2C2CCCC12
+c1ccoc1
+O=c1ncccn1C1=CCOCC1
+O=C1CCOC(CCC2CC=CC3C=CCCC32)C1
+c1ccc(-c2cc[nH]c2)cc1
+c1ccc(-c2cccnc2CC(Cn2cnnn2)c2ccccc2)cc1
+c1ccc(Sc2cccc(COC(Cn3ccnc3)c3ccccc3)c2)cc1
+O=c1ncccn1C1=CCOCC1
+c1ccc(CCn2cncn2)cc1
+O=c1ncccn1C1=CCOCC1
